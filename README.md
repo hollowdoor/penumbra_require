@@ -5,6 +5,15 @@ penumbra-require
 
 Install modules there, and build modules that will be shared among projects.
 
+Install
+-------
+
+`npm install --save-dev penumbra-require`
+
+Or with `penumbra`:
+
+`npm install --save-dev penumbra penumbra-require`
+
 Basic Usage
 -----------
 
@@ -19,7 +28,7 @@ module.exports = function(){
 Some where, any where create a javascript file with these contents:
 
 ```javascript
-var prequire = require('../index');
+var prequire = require('penumbra-require');
 var test = prequire('test')();
 console.log(test);
 ```
@@ -43,7 +52,7 @@ In a [penumbra](https://github.com/hollowdoor/penumbra) task file
 
 ```javascript
 var pen = require('penumbra')(),
-    prequire = require('../index'),
+    prequire = require('penumbra-require'),
     test = prequire('test');
 
 pen.task('test', function * (){
